@@ -42,9 +42,9 @@ public class Gun : MonoBehaviour {
         ); {
             Debug.Log(hit.transform.name);
 
-            Target target = hit.transform.GetComponent<Target>();
-            if (target != null) {
-                
+            lb_Bird bird = hit.transform.GetComponent<lb_Bird>();
+            if (bird != null) {
+                bird.KillBird();
             }
         }
     }
